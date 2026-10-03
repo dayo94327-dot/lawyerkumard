@@ -1,0 +1,471 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Dayor Kumar Law Firm</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Hanken+Grotesk:wght@400;500;600;700&display=swap">
+<style>
+  /* Layout: sticky name bar, asymmetric hero with a practice index beside the headline, ruled service list, quiet testimonial band, single contact panel. */
+  :root {
+    --bg: #F5F6F3;
+    --surface: #FFFFFF;
+    --ink: #15212B;
+    --muted: #52606B;
+    --line: #D8DDD6;
+    --accent: #1D5A4B;
+    --accent-ink: #FFFFFF;
+    --brass: #8A6624;
+    --band: #14302A;
+    --band-ink: #EAF0EC;
+    --band-muted: #A9BDB4;
+    --band-card: #1B3D35;
+    --font-display: "Libre Caslon Text", "Iowan Old Style", Georgia, serif;
+    --font-body: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0F1715;
+      --surface: #162320;
+      --ink: #E8EEEA;
+      --muted: #9AABA4;
+      --line: #2A3A36;
+      --accent: #5FB59E;
+      --accent-ink: #0B1512;
+      --brass: #D2A85A;
+      --band: #0A110F;
+      --band-ink: #E8EEEA;
+      --band-muted: #93A59E;
+      --band-card: #131F1C;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0F1715;
+    --surface: #162320;
+    --ink: #E8EEEA;
+    --muted: #9AABA4;
+    --line: #2A3A36;
+    --accent: #5FB59E;
+    --accent-ink: #0B1512;
+    --brass: #D2A85A;
+    --band: #0A110F;
+    --band-ink: #E8EEEA;
+    --band-muted: #93A59E;
+    --band-card: #131F1C;
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 17px;
+    line-height: 1.6;
+    margin: 0;
+    padding-inline: 0;
+  }
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+  .wrap { width: 100%; max-width: 1120px; margin-inline: auto; padding-inline: 20px; }
+  h1, h2, h3 { font-family: var(--font-display); font-weight: 400; margin: 0; text-wrap: balance; letter-spacing: -0.01em; }
+  p { margin: 0; }
+  .eyebrow {
+    font-size: 12.5px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--brass);
+  }
+
+  /* Header */
+  header.bar {
+    position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10;
+    background: var(--bg); border-bottom: 1px solid var(--line);
+  }
+  .bar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 64px; }
+  .brand { font-family: var(--font-display); font-size: 19px; text-decoration: none; letter-spacing: -0.005em; }
+  .brand span { color: var(--brass); }
+  nav.links { display: flex; gap: 26px; font-size: 15px; font-weight: 500; }
+  nav.links a { text-decoration: none; color: var(--muted); }
+  nav.links a:hover { color: var(--ink); }
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    min-height: 46px; padding: 0 22px; border-radius: 4px; border: 1px solid var(--accent);
+    background: var(--accent); color: var(--accent-ink); font: 600 15px var(--font-body);
+    text-decoration: none; cursor: pointer;
+  }
+  .btn:hover { filter: brightness(1.08); }
+  .btn.ghost { background: transparent; color: var(--ink); border-color: var(--ink); }
+  .btn.ghost:hover { background: var(--ink); color: var(--bg); filter: none; }
+  .bar .btn { min-height: 40px; padding: 0 16px; }
+
+  /* Hero */
+  .hero { padding-block: 72px 80px; }
+  .hero .wrap { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 64px; align-items: start; }
+  .hero h1 { font-size: clamp(2.3rem, 5.4vw, 4.1rem); line-height: 1.08; margin-top: 18px; }
+  .hero h1 em { font-style: italic; color: var(--accent); }
+  .hero .lede { max-width: 54ch; margin-top: 26px; font-size: 19px; color: var(--muted); }
+  .hero .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
+  .index { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 26px 26px 12px; }
+  .index h2 { font-family: var(--font-body); font-size: 12.5px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+  .index ul { list-style: none; margin: 14px 0 0; padding: 0; }
+  .index li a {
+    display: flex; justify-content: space-between; align-items: baseline; gap: 12px;
+    padding: 14px 0; border-top: 1px solid var(--line); text-decoration: none;
+    font-family: var(--font-display); font-size: 19px;
+  }
+  .index li:first-child a { border-top: 0; }
+  .index li a span { color: var(--accent); font-family: var(--font-body); font-size: 14px; }
+  .index li a:hover { color: var(--accent); }
+
+  /* Sections */
+  section { padding-block: 84px; }
+  .head { max-width: 62ch; margin-bottom: 44px; }
+  .head h2 { font-size: clamp(1.8rem, 3.6vw, 2.6rem); line-height: 1.15; margin-top: 12px; }
+  .head p { margin-top: 14px; color: var(--muted); }
+
+  /* Services: ruled list */
+  #services { border-top: 1px solid var(--line); }
+  .svc { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--ink); }
+  .svc li {
+    display: grid; grid-template-columns: 56px minmax(0, 1fr) minmax(0, 1.3fr); gap: 24px; align-items: start;
+    padding: 28px 0; border-bottom: 1px solid var(--line);
+  }
+  .svc svg { width: 40px; height: 40px; color: var(--accent); }
+  .svc h3 { font-size: 24px; line-height: 1.2; }
+  .svc p { color: var(--muted); max-width: 52ch; }
+
+  /* Why */
+  #why { background: var(--surface); border-block: 1px solid var(--line); }
+  .why { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; }
+  .why > div { padding: 4px 28px 4px 0; }
+  .why > div + div { padding-left: 28px; border-left: 1px solid var(--line); }
+  .why h3 { font-size: 21px; line-height: 1.25; }
+  .why p { margin-top: 10px; color: var(--muted); font-size: 16px; }
+
+  /* Steps */
+  .steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; list-style: none; margin: 0; padding: 0; counter-reset: s; }
+  .steps li { counter-increment: s; border-top: 2px solid var(--accent); padding-top: 18px; }
+  .steps li::before {
+    content: "Step " counter(s); font-size: 12.5px; font-weight: 600; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--brass); display: block; margin-bottom: 8px;
+  }
+  .steps h3 { font-size: 22px; }
+  .steps p { margin-top: 8px; color: var(--muted); font-size: 16px; }
+
+  /* Testimonials */
+  #voices { background: var(--band); color: var(--band-ink); }
+  #voices .head p { color: var(--band-muted); }
+  #voices .eyebrow { color: var(--brass); }
+  .quotes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+  .quote { background: var(--band-card); border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; padding: 26px; display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+  .stars { color: var(--brass); letter-spacing: 3px; font-size: 15px; }
+  .quote blockquote { margin: 0; font-family: var(--font-display); font-size: 18px; line-height: 1.55; flex: 1; }
+  .quote cite { font-style: normal; font-size: 14.5px; color: var(--band-muted); }
+  .sample {
+    align-self: flex-start; font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--band-muted); border: 1px dashed var(--band-muted); border-radius: 3px; padding: 3px 8px;
+  }
+  .note { margin-top: 28px; font-size: 14.5px; color: var(--band-muted); max-width: 70ch; }
+
+  /* FAQ */
+  .faq { max-width: 780px; border-top: 1px solid var(--ink); }
+  .faq details { border-bottom: 1px solid var(--line); }
+  .faq summary {
+    list-style: none; cursor: pointer; padding: 20px 0; display: flex; justify-content: space-between; align-items: center; gap: 16px;
+    font-family: var(--font-display); font-size: 20px;
+  }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: "+"; font-family: var(--font-body); font-size: 26px; color: var(--accent); line-height: 1; }
+  .faq details[open] summary::after { content: "\2212"; }
+  .faq details p { padding: 0 0 22px; color: var(--muted); max-width: 62ch; }
+
+  /* Contact */
+  #contact { padding-top: 0; }
+  .contact {
+    background: var(--accent); color: var(--accent-ink); border-radius: 8px; padding: clamp(28px, 5vw, 56px);
+    display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 40px; align-items: center;
+  }
+  .contact h2 { font-size: clamp(1.8rem, 3.6vw, 2.6rem); line-height: 1.15; }
+  .contact p { margin-top: 14px; max-width: 46ch; opacity: 0.92; }
+  .ways { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+  .way {
+    background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.28); border-radius: 6px; padding: 16px 18px;
+    display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 16px; min-width: 0;
+  }
+  .way small { display: block; font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.8; }
+  .way strong { font-size: 18px; font-weight: 600; overflow-wrap: anywhere; user-select: all; }
+  .way .row { display: flex; gap: 8px; }
+  .way a, .way button {
+    font: 600 14px var(--font-body); min-height: 38px; padding: 0 14px; border-radius: 4px; cursor: pointer;
+    background: var(--accent-ink); color: var(--accent); border: 0; text-decoration: none; display: inline-flex; align-items: center;
+  }
+  .way button.copy { background: transparent; color: var(--accent-ink); border: 1px solid rgba(255,255,255,0.5); }
+
+  /* Footer */
+  footer { border-top: 1px solid var(--line); padding-block: 40px 56px; color: var(--muted); font-size: 14.5px; }
+  footer .wrap { display: grid; gap: 14px; }
+  footer .name { font-family: var(--font-display); font-size: 18px; color: var(--ink); }
+  footer .todo { color: var(--brass); font-weight: 600; }
+
+  @media (max-width: 900px) {
+    .hero .wrap { grid-template-columns: minmax(0, 1fr); gap: 44px; }
+    .why { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 36px; }
+    .why > div:nth-child(3) { border-left: 0; padding-left: 0; }
+    .quotes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .contact { grid-template-columns: minmax(0, 1fr); }
+  }
+  @media (max-width: 720px) {
+    nav.links { display: none; }
+    section { padding-block: 60px; }
+    .hero { padding-block: 44px 56px; }
+    .svc li { grid-template-columns: 44px minmax(0, 1fr); gap: 6px 16px; }
+    .svc li p { grid-column: 2; }
+    .steps { grid-template-columns: minmax(0, 1fr); }
+    .quotes { grid-template-columns: minmax(0, 1fr); }
+  }
+  @media (max-width: 560px) {
+    .why { grid-template-columns: minmax(0, 1fr); }
+    .why > div, .why > div + div { padding: 0; border-left: 0; }
+    .why > div + div { padding-top: 24px; border-top: 1px solid var(--line); }
+    .hero .cta .btn { flex: 1 1 100%; }
+  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="#top">Dayor Kumar <span>Law Firm</span></a>
+    <nav class="links" aria-label="Main">
+      <a href="#services">Practice areas</a>
+      <a href="#why">Why choose us</a>
+      <a href="#voices">Testimonials</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn" href="#contact">Get in touch</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Legal practice &middot; United Kingdom</p>
+        <h1>Trusted legal guidance. Professional representation. <em>Practical solutions.</em></h1>
+        <p class="lede">Dayor Kumar Law Firm provides professional legal guidance and representation across a range of legal matters in the United Kingdom. Your matter deserves professional attention, clear communication and dedicated representation.</p>
+        <div class="cta">
+          <a class="btn" href="#contact">Speak to the firm</a>
+          <a class="btn ghost" href="#services">View practice areas</a>
+        </div>
+      </div>
+      <aside class="index" aria-label="Practice areas">
+        <h2>Areas of practice</h2>
+        <ul>
+          <li><a href="#services">Corporate Law <span>&rarr;</span></a></li>
+          <li><a href="#services">Criminal Law <span>&rarr;</span></a></li>
+          <li><a href="#services">Family Law <span>&rarr;</span></a></li>
+          <li><a href="#services">Property Law <span>&rarr;</span></a></li>
+          <li><a href="#services">Immigration Law <span>&rarr;</span></a></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Our legal services</p>
+        <h2>Five core areas of practice, each handled with care and a practical focus on your goals.</h2>
+      </div>
+      <ul class="svc">
+        <li>
+          <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="12" width="26" height="21" rx="1.5"/><path d="M15 12V8h10v4M7 21h26M18 21v3h4v-3"/></svg>
+          <h3>Corporate Law</h3>
+          <p>Guidance for businesses on structure, contracts, compliance and commercial matters.</p>
+        </li>
+        <li>
+          <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6v28M12 34h16M10 12h20"/><path d="M10 12 5 24a5 5 0 0 0 10 0zM30 12l-5 12a5 5 0 0 0 10 0z"/></svg>
+          <h3>Criminal Law</h3>
+          <p>Firm, professional representation when your rights and reputation are at stake.</p>
+        </li>
+        <li>
+          <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="14" cy="13" r="4.5"/><circle cx="27" cy="15" r="3.5"/><path d="M5 32c0-6 4-10 9-10s9 4 9 10M23 31c0-4 2-7 5-7s6 3 6 7"/></svg>
+          <h3>Family Law</h3>
+          <p>Sensitive, clear advice on family matters, with the wellbeing of those involved in mind.</p>
+        </li>
+        <li>
+          <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19 20 7l15 12M9 17v16h22V17M17 33V24h6v9"/></svg>
+          <h3>Property Law</h3>
+          <p>Support with buying, selling, leasing and resolving property matters.</p>
+        </li>
+        <li>
+          <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="6" width="24" height="28" rx="2"/><circle cx="20" cy="17" r="5"/><path d="M13 28h14M20 12v10M15.5 17h9"/></svg>
+          <h3>Immigration Law</h3>
+          <p>Practical help navigating UK immigration processes and requirements.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="why">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Why choose the firm</p>
+        <h2>We take the time to understand your circumstances, protect your interests and guide you clearly through your legal journey.</h2>
+      </div>
+      <div class="why">
+        <div><h3>Professional attention</h3><p>Every matter receives careful, dedicated focus.</p></div>
+        <div><h3>Clear communication</h3><p>Plain-English advice, with no confusing jargon.</p></div>
+        <div><h3>Practical solutions</h3><p>Realistic options aimed at the outcome you need.</p></div>
+        <div><h3>Protecting your interests</h3><p>Dedicated representation from first contact onwards.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="process">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">What to expect</p>
+        <h2>From first message to clear next steps.</h2>
+      </div>
+      <ol class="steps">
+        <li><h3>Get in touch</h3><p>Message the firm on Telegram or by email with a short outline of your matter and which area it falls under.</p></li>
+        <li><h3>Explain your situation</h3><p>Your circumstances and goals are discussed so the right approach can be identified.</p></li>
+        <li><h3>Receive clear advice</h3><p>You are given realistic options in plain English, so you can decide how to proceed.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="voices">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Client testimonials</p>
+        <h2>What clients say about working with the firm.</h2>
+      </div>
+      <div class="quotes">
+        <figure class="quote" style="margin:0">
+          <span class="sample">Sample &middot; replace with real feedback</span>
+          <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
+          <blockquote>&ldquo;Clear, professional and always available to answer my questions. I understood every step of my case.&rdquo;</blockquote>
+          <cite>Client name &middot; Family Law</cite>
+        </figure>
+        <figure class="quote" style="margin:0">
+          <span class="sample">Sample &middot; replace with real feedback</span>
+          <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
+          <blockquote>&ldquo;Practical advice that saved my business time and money. Highly recommended.&rdquo;</blockquote>
+          <cite>Client name &middot; Corporate Law</cite>
+        </figure>
+        <figure class="quote" style="margin:0">
+          <span class="sample">Sample &middot; replace with real feedback</span>
+          <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
+          <blockquote>&ldquo;Calm, thorough and dedicated. I felt supported throughout my immigration application.&rdquo;</blockquote>
+          <cite>Client name &middot; Immigration Law</cite>
+        </figure>
+        <figure class="quote" style="margin:0">
+          <span class="sample">Sample &middot; replace with real feedback</span>
+          <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
+          <blockquote>&ldquo;Straightforward about my options and steady under pressure. I always knew where my case stood.&rdquo;</blockquote>
+          <cite>Client name &middot; Criminal Law</cite>
+        </figure>
+        <figure class="quote" style="margin:0">
+          <span class="sample">Sample &middot; replace with real feedback</span>
+          <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
+          <blockquote>&ldquo;Every stage of the purchase was explained, and each question got a clear, prompt answer.&rdquo;</blockquote>
+          <cite>Client name &middot; Property Law</cite>
+        </figure>
+        <figure class="quote" style="margin:0">
+          <span class="sample">Sample &middot; replace with real feedback</span>
+          <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
+          <blockquote>&ldquo;Patient and sensitive at a difficult time, while still giving me honest, practical advice.&rdquo;</blockquote>
+          <cite>Client name &middot; Family Law</cite>
+        </figure>
+      </div>
+      <p class="note">These testimonials are placeholders. Replace each one with genuine feedback, with the client&rsquo;s permission, before the site goes live.</p>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Questions</p>
+        <h2>Before you get in touch.</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Which areas of law does the firm cover?</summary>
+          <p>Corporate, criminal, family, property and immigration law, for clients in the United Kingdom.</p>
+        </details>
+        <details>
+          <summary>How do I contact the firm?</summary>
+          <p>Send a message on Telegram (@Dayord) or email dayo94327@gmail.com. Please include a short outline of your matter and which area of law it relates to.</p>
+        </details>
+        <details>
+          <summary>What should I include in my first message?</summary>
+          <p>A brief summary of what has happened, any deadlines or court or hearing dates you know about, and what outcome you are hoping for. Please do not send sensitive documents until you have been asked to.</p>
+        </details>
+        <details>
+          <summary>Will I understand the advice I am given?</summary>
+          <p>Yes. Advice is given in plain English, with realistic options explained so you can make informed decisions.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact">
+        <div>
+          <h2>Tell us about your legal matter.</h2>
+          <p>Get in touch for professional attention, clear communication and dedicated representation from first contact onwards.</p>
+        </div>
+        <div class="ways">
+          <div class="way">
+            <div><small>Telegram</small><strong>@Dayord</strong></div>
+            <div class="row">
+              <a href="https://t.me/Dayord">Open Telegram</a>
+              <button class="copy" type="button" data-copy="@Dayord" id="copy-tg">Copy</button>
+            </div>
+          </div>
+          <div class="way">
+            <div><small>Email</small><strong>dayo94327@gmail.com</strong></div>
+            <div class="row">
+              <a href="mailto:dayo94327@gmail.com">Write email</a>
+              <button class="copy" type="button" data-copy="dayo94327@gmail.com" id="copy-email">Copy</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="name">Dayor Kumar Law Firm</p>
+    <p class="todo">Regulated by: [add your regulator and registration number before publishing]</p>
+    <p>This website provides general information only. It is not legal advice and does not create a lawyer-client relationship. Contacting the firm through this site does not establish one until it is confirmed in writing.</p>
+    <p>&copy; 2026 Dayor Kumar Law Firm. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll("button.copy").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var text = btn.getAttribute("data-copy");
+      var label = btn.textContent;
+      function done(msg) { btn.textContent = msg; setTimeout(function () { btn.textContent = label; }, 1600); }
+      function fallback() {
+        var strong = btn.closest(".way").querySelector("strong");
+        var range = document.createRange();
+        range.selectNodeContents(strong);
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        sel.addRange(range);
+        done("Selected");
+      }
+      try {
+        navigator.clipboard.writeText(text).then(function () { done("Copied"); }, fallback);
+      } catch (e) { fallback(); }
+    });
+  });
+</script>
+
+</body></html>
